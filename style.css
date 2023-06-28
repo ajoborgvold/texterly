@@ -29,7 +29,7 @@ h2 {
 
 .subheading {
     text-align: center;
-    font-weight: 300;
+    font-weight: 400;
     font-style: italic;
     letter-spacing: .05em;
 }
@@ -101,7 +101,7 @@ header {
 /* Textarea */
 
 .text-area-container {
-    flex-grow: 1;
+    flex-grow: .75;
     display: flex;
     position: relative;
     width: 100%;
