@@ -135,8 +135,7 @@ textarea {
     overflow: hidden;
 }
 
-textarea:hover,
-textarea:focus {
+textarea:hover {
     border: 2px solid #FD7368;
 }
 
