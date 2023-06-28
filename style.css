@@ -104,7 +104,7 @@ header {
 /* Textarea */
 
 .text-area-container {
-    flex-grow: .9;
+    flex-grow: 1;
     display: flex;
     position: relative;
     width: 100%;
