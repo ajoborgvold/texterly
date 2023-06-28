@@ -10,7 +10,7 @@ body {
     flex-direction: column;
     /* justify-content: space-between; */
     align-items: center;
-    height: 100vh;
+    height: 100dvh;
     margin: 0 auto;
     /* padding: 0 1em; */
     padding: .5em 1em;
@@ -276,6 +276,7 @@ button {
     
 /* Layout */
     .container {
+        /* height: 100vh; */
         padding: .5em 2em 2em;
     }
     
