@@ -120,6 +120,16 @@ textarea {
     outline-color: #FD7368;
 }
 
+.textarea-label {
+    position: absolute;
+    clip: rect(1px, 1px, 1px, 1px);
+    padding: 0;
+    border: 0;
+    height: 1px;
+    width: 1px;
+    overflow: hidden;
+}
+
 textarea:hover,
 textarea:focus,
 textarea:active {
