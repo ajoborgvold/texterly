@@ -242,8 +242,7 @@ button {
 }
 
 .enabled:hover,
-.enabled:focus,
-.enabled:active {
+.enabled:focus {
     border: 2px solid #282828;
     box-shadow: 0 0 10px #F5F5F5 inset;
     cursor: pointer;
