@@ -64,9 +64,8 @@ function App() {
         }
     }
         
-//--- In the function below, I've commented out the copy method since it doesn't work here on Scrimba. But it should work in a real world browser – at least I hope so! ---//
     function copyText() {
-        // navigator.clipboard.writeText(textareaValue)
+        navigator.clipboard.writeText(textareaValue)
         setTextareaDisabled(true)
         setCopy(true)
         setTimeout(() => {
