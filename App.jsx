@@ -3,13 +3,7 @@ import Header from './components/Header'
 import Textarea from './components/Textarea'
 import ProcessSection from './components/ProcessSection'
 
-// import { Configuration, OpenAIApi } from 'openai'
 
-// const configuration = new Configuration({
-//     apiKey: process.env.OPENAI_API_KEY
-// })
-
-// const openai = new OpenAIApi(configuration)
     
 function App() {
     const [theme, setTheme] = useState('light')
@@ -44,6 +38,8 @@ function App() {
         const url = 'https://gorgeous-macaron-b2dbfc.netlify.app/.netlify/functions/callApi'
 
         if (textareaValue) {
+            setLoading(true)
+            setTextareaDisabled(true)
             const response = await fetch(url, {
                 method: 'POST',
                 header: {
