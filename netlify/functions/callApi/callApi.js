@@ -13,6 +13,7 @@ const handler = async (event) => {
           model: "text-davinci-edit-001",
           input: event.body,
           instruction: "Correct spelling mistakes, punctuation, grammar and capitalizing",
+          temperature: 0.7
       })
     return {
       statusCode: 200,
