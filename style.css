@@ -13,7 +13,7 @@ body {
     height: 100vh;
     margin: 0 auto;
     /* padding: 0 1em; */
-    padding: 1em;
+    padding: .5em 1em 2em;
 }
 
 
@@ -115,7 +115,8 @@ textarea {
     background-color: #FFE6E4;
     font-weight: 300;
     width: 100%;
-    margin: 1em auto;
+    /* margin: 1em auto; */
+    margin: 2em auto;
     padding: 1em;
     border: 2px solid #FFE6E4;
     border-radius: .5em;
@@ -274,7 +275,7 @@ button {
     
 /* Layout */
     .container {
-        padding: 0 2em;
+        padding: .5em 2em 2em;
     }
     
     .process-container {
@@ -306,7 +307,7 @@ button {
     
 /* Layout */
     .container {
-        padding: 0 3em;
+        padding: .5em 3em 2em;
     }
     
     header {
