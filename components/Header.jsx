@@ -11,6 +11,7 @@ function Header(props) {
             >
             </i>
             <h1>Texterly</h1>
+            <h2 className='subheading'>Let an AI do the proofreading</h2>
         </header>
     )
 }

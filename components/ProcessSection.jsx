@@ -11,11 +11,11 @@ function ProcessSection(props) {
             <div className="process-container">
                 <button className={`process-btn ${btnClass}`} onClick={editText}>Process</button>
                 <div className="counter-wrapper">
-                    <h2>Characters</h2>
+                    <h2 className='counter__heading'>Characters</h2>
                     <p className="counter__number">{characters}</p>
                 </div>
                 <div className="counter-wrapper">
-                    <h2>Words</h2>
+                    <h2 className='counter__heading'>Words</h2>
                     <p className="counter__number">{words}</p>
                 </div>
             </div>
