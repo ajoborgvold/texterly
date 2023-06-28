@@ -136,8 +136,7 @@ textarea {
 }
 
 textarea:hover,
-textarea:focus,
-textarea:active {
+textarea:focus {
     border: 2px solid #FD7368;
 }
 
