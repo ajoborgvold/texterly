@@ -5,7 +5,7 @@ import ProcessSection from './components/ProcessSection'
 
 
 function App() {
-    const [theme, setTheme] = useState('light')
+    const [theme, setTheme] = useState('dark')
     const [textareaValue, setTextareaValue] = useState('')
     const [numCharacters, setNumCharacters] = useState(0)
     const [numWords, setNumWords] = useState(0)
@@ -26,7 +26,7 @@ function App() {
     }, [textareaValue])
 
     function toggleTheme() {
-        setTheme(prevTheme => prevTheme === 'light' ? 'dark' : 'light')
+        setTheme(prevTheme => prevTheme === 'dark' ? 'light' : 'dark')
     }
 
     function handleTextareaChange(e) {
