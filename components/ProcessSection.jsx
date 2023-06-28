@@ -1,9 +1,9 @@
 import React from 'react'
 
 function ProcessSection(props) {
-    const { loading, apiError, words, enableCopy, copyText, editText, characters } = props
+    const { loading, apiError, words, enableCopy, copyText, editText, characters, isTextProcessed } = props
     
-    const btnClass = !loading && !apiError && words ? 'enabled' : 'disabled'
+    const btnClass = !loading && !apiError && words || !isTextProcessed ? 'enabled' : 'disabled'
     
     return (
         <section className="process-section">

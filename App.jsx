@@ -14,6 +14,7 @@ function App() {
     const [textareaDisabled, setTextareaDisabled] = useState(false)
     const [loading, setLoading] = useState(false)
     const [apiError, setApiError] = useState(false)
+    const [isTextProcessed, setIsTextProcessed] = useState(false)
     
     useEffect(() => {
         const allWordsArr = textareaValue.split(' ')
@@ -59,6 +60,7 @@ function App() {
                 setLoading(false)
                 setTextareaDisabled(false)
                 setEnableCopy(true)
+                setIsTextProcessed(true)
             }
 
         }
@@ -97,6 +99,7 @@ function App() {
                 copyText={copyText}
                 loading={loading}
                 apiError={apiError}
+                isTextProcessed={isTextProcessed}
             />
         </div>
     )
