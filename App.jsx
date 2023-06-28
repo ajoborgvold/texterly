@@ -2,13 +2,14 @@ import React, { useState, useEffect } from 'react'
 import Header from './components/Header'
 import Textarea from './components/Textarea'
 import ProcessSection from './components/ProcessSection'
-import { Configuration, OpenAIApi } from 'openai'
 
-const configuration = new Configuration({
-    apiKey: process.env.OPENAI_API_KEY
-})
+// import { Configuration, OpenAIApi } from 'openai'
 
-const openai = new OpenAIApi(configuration)
+// const configuration = new Configuration({
+//     apiKey: process.env.OPENAI_API_KEY
+// })
+
+// const openai = new OpenAIApi(configuration)
     
 function App() {
     const [theme, setTheme] = useState('light')
@@ -40,28 +41,44 @@ function App() {
     }
     
     async function editText() {
+        const url = 'https://gorgeous-macaron-b2dbfc.netlify.app/.netlify/functions/callApi'
+
         if (textareaValue) {
-            setLoading(true)
-            setTextareaDisabled(true)
-            const response = await openai.createEdit({
-                model: "text-davinci-edit-001",
-                input: textareaValue,
-                instruction: "Fix spelling mistakes, punctuation, grammar and capitalizing",
-            }).catch(err => {
-                console.log(err.response)
-                setLoading(false)
-                setApiError(true)
-                setTextareaDisabled(true)
+            const response = await fetch(url, {
+                method: 'POST',
+                header: {
+                    'content-type': 'text/plain'
+                },
+                body: textareaValue
             })
-            
-            if (response) {
-                const returnedText = response.data.choices[0].text
-                setTextareaValue(returnedText)
-                setLoading(false)
-                setTextareaDisabled(false)
-                setEnableCopy(true)
-            }
+            const data = await response.json()
+            console.log(data)
         }
+
+
+
+        // if (textareaValue) {
+        //     setLoading(true)
+        //     setTextareaDisabled(true)
+        //     const response = await openai.createEdit({
+        //         model: "text-davinci-edit-001",
+        //         input: textareaValue,
+        //         instruction: "Fix spelling mistakes, punctuation, grammar and capitalizing",
+        //     }).catch(err => {
+        //         console.log(err.response)
+        //         setLoading(false)
+        //         setApiError(true)
+        //         setTextareaDisabled(true)
+        //     })
+            
+        //     if (response) {
+        //         const returnedText = response.data.choices[0].text
+        //         setTextareaValue(returnedText)
+        //         setLoading(false)
+        //         setTextareaDisabled(false)
+        //         setEnableCopy(true)
+        //     }
+        // }
     }
         
 //--- In the function below, I've commented out the copy method since it doesn't work here on Scrimba. But it should work in a real world browser – at least I hope so! ---//
