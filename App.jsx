@@ -46,9 +46,22 @@ function App() {
                     'content-type': 'text/plain'
                 },
                 body: textareaValue
+            }).catch(err => {
+                console.log(err.response)
+                setLoading(false)
+                setApiError(true)
+                setTextareaDisabled(true)
             })
             const data = await response.json()
-            console.log(data)
+            
+            if (data) {
+                const returnedText = data.reply.choices[0].text
+                setTextareaValue(returnedText)
+                setLoading(false)
+                setTextareaDisabled(false)
+                setEnableCopy(true)
+            }
+
         }
 
 
@@ -61,19 +74,19 @@ function App() {
         //         input: textareaValue,
         //         instruction: "Fix spelling mistakes, punctuation, grammar and capitalizing",
         //     }).catch(err => {
-        //         console.log(err.response)
-        //         setLoading(false)
-        //         setApiError(true)
-        //         setTextareaDisabled(true)
+                // console.log(err.response)
+                // setLoading(false)
+                // setApiError(true)
+                // setTextareaDisabled(true)
         //     })
             
-        //     if (response) {
-        //         const returnedText = response.data.choices[0].text
-        //         setTextareaValue(returnedText)
-        //         setLoading(false)
-        //         setTextareaDisabled(false)
-        //         setEnableCopy(true)
-        //     }
+            // if (response) {
+            //     const returnedText = response.data.choices[0].text
+            //     setTextareaValue(returnedText)
+            //     setLoading(false)
+            //     setTextareaDisabled(false)
+            //     setEnableCopy(true)
+            // }
         // }
     }
         

@@ -12,7 +12,7 @@ const handler = async (event) => {
     const response = await openai.createEdit({
           model: "text-davinci-edit-001",
           input: event.body,
-          instruction: "Fix spelling mistakes, punctuation, grammar and capitalizing",
+          instruction: "Correct spelling mistakes, punctuation, grammar and capitalizing",
       })
     return {
       statusCode: 200,
