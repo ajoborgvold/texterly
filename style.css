@@ -228,6 +228,10 @@ button {
     border-radius: .5em;
 }
 
+.enabled {
+    color:#000;
+}
+
 .disabled {
     background-color: #B7C8BB;
     color: #5C6B5F;
