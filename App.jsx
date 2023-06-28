@@ -97,7 +97,6 @@ function App() {
                 copyText={copyText}
                 loading={loading}
                 apiError={apiError}
-                isTextProcessed={isTextProcessed}
             />
         </div>
     )
