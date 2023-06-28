@@ -195,6 +195,7 @@ textarea:active {
 }
 
 button {
+    color:#000;
     font-family: inherit;
     font-size: 1rem;
     border-radius: .5em;
@@ -228,9 +229,9 @@ button {
     border-radius: .5em;
 }
 
-.enabled {
+/* .enabled {
     color:#000;
-}
+} */
 
 .disabled {
     background-color: #B7C8BB;
