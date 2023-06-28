@@ -9,7 +9,7 @@ body {
     flex-direction: column;
     justify-content: space-between;
     align-items: center;
-    height: 100vh;
+    height: 100%;
     margin: 0 auto;
     padding: 0 1em;
 }
@@ -101,7 +101,7 @@ header {
 /* Textarea */
 
 .text-area-container {
-    flex-grow: .75;
+    flex-grow: 1;
     display: flex;
     position: relative;
     width: 100%;
