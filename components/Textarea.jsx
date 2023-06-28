@@ -7,8 +7,10 @@ function Textarea(props) {
     
     return (
         <section className="text-area-container">
+            <label htmlFor='pasted-text' className='textarea-label'></label>
             <textarea 
                 value={value} 
+                id='pasted-text'
                 placeholder="Paste your text here"
                 onChange={handleTextareaChange}
                 disabled={textareaDisabled}
